@@ -8,5 +8,22 @@ module.exports = {
       tableName: 'dbmigrations',
     },
     seeds: { directory: './database/seeds' },
+    
+    
   },
+  testing: {
+    client: "sqlite3",
+    useNullAsDefault: true,
+    connection: {
+      filename: ":memory:",
+    },
+    migrations: {
+      directory: "./database/migrations",
+    },
+    seeds: {
+      directory: "./database/seeds",
+    },
+  },
+
+  
 };
