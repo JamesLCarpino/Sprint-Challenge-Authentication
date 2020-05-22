@@ -1,4 +1,4 @@
-const router = require('express')
+const router = require('express').Router()
 
 const Users = require('./users-model')
 const restricted = require('../auth/authenticate-middleware')
@@ -14,3 +14,5 @@ router.get('/', (req, res)=>{
             res.status(403).json(err, {message: 'you cant enter'})
         })
 })
+
+module.exports = router;
