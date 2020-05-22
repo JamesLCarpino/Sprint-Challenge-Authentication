@@ -22,6 +22,7 @@ test("GET /api/users to get all users", async () => {
   .get('/api/users')
   .set('authorization', login.body.token)
   expect(res.status).toBe(200)
-  expect(res.body[0]).toHaveProperty('username')
+  expect(Array.isArray(res.body.users)).toBe(true)
+  
 
 });

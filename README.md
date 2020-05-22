@@ -39,13 +39,15 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] What is the purpose of using _sessions_?
-
+    stores the session identifier in the cookie while the actual session data resides in backend session store like connect-redis , where as cookie-session allows you to store the session data in a cookie (client-side)
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+    bcyrpt gives us a web token to be able to decrypt passwords. and hash them and give them rounds.
 
 - [ ] What does bcrypt do to slow down attackers?
+ It takes more effort to brute force attack the password. The slower the algorithm, the less guesses can be made per second. The extra time won't be noticed by a user of the system, but will make it harder to crack the password.
 
 - [ ] What are the three parts of the JSON Web Token?
-
+the payload, secret, option
 ## Minimum Viable Product
 
 Implement an User Authentication System. Hash user's passwords before saving them to the database. Use `JSON Web Tokens` or `Sessions and Cookies` to persist authentication across requests.
